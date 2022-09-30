@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_HTML실습문제_1</title>
+</head>
+
+<body>
+
+    - id넣기
+
+
+    <form action="#">
+        고객명 : <input id="userName" type="text"> <br><br>
+        전화번호 : <input id="tel" type="tel"> <br><br>
+        피자선택 : <select name="pizza">
+            <option>피자를 선택하세요</option>
+            <option>치즈크러스트</option>
+            <option>포테이토피자</option>
+            <option>스테이크피자</option>
+            <option>콤비네이션피자</option>
+            <option>하와이안피자</option>
+
+        </select><br>
+        <fieldset>
+            <legend>피자 사이즈</legend>
+
+            <input name="size" id="Small" type="radio">
+            <label for="Small">Small</label><br>
+
+            <input name="size" id="Medium" type="radio">
+            <label for="Medium">Medium</label><br>
+
+            <input name="size" id="Large" type="radio">
+            <label for="Large">Large</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>토핑 선택</legend>
+
+            <input name="topping" id="bacon" type="checkbox">
+            <label for="bacon">베이컨</label><br>
+
+            <input name="topping" id="cheeze" type="checkbox">
+            <label for="cheeze">치즈</label><br>
+
+            <input name="topping" id="onion" type="checkbox">
+            <label for="onion">양파</label><br>
+
+            <input name="topping" id="mushroom" type="checkbox">
+            <label for="mushroom">버섯</label><br>
+        </fieldset><br>
+        희망배송시간 : <input type="time"> <br><br>
+        배송시 요청사항 : <textarea id="claim" cols="30" rows="3"></textarea><br><br>
+        <button>주문하기</button>
+    </form>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

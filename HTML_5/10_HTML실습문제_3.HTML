@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_HTML실습문제_3</title>
+</head>
+
+
+
+<body>
+    <h1>회원가입</h1>
+    <form action="#">
+        <fieldset>
+            <legend>필수 입력 사항</legend>
+            ID<input type="text" placeholder="아이디 10글자 이내" required> <br>
+            비밀번호<input type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" required size="30px"> <br>
+            비밀번호 확인<input type="text" required size="30px"> <br>
+            Email<input type="text" required> <select>
+                <option>직접입력</option>
+                <option>@naver.com</option>
+                <option>@daum.net</option>
+                <option>@google.com</option>
+                <option>@nate.com</option>
+            </select> <br>
+        </fieldset><br>
+        <fieldset>
+            <legend>추가 정보</legend>
+            프로필 사진 <input type="file"><br>
+            <br>성별 :
+            <input type="radio" name="gender" id="male"><label for="male">남자</label>
+            <input type="radio" name="gender" id="female"><label for="female">여자</label><br>
+            <br>생년월일 : <input type="date"><br><br>
+
+            <br>취미<br>
+            <!-- '기타'누르면 checkbox 체크되게 하는 것? -->
+            <input type="checkbox" id="baseball" name="hobby"><label for="baseball">야구</label>
+            <input type="checkbox" id="basketball" name="hobby"><label for="basketball">농구</label>
+            <input type="checkbox" id="soccer" name="hobby"><label for="soccer">축구</label><br>
+            <input type="checkbox" id="study" name="hobby"><label for="study">공부</label>
+            <input type="checkbox" id="music" name="hobby"><label for="music">음악감상</label><br>
+            <input type="checkbox" id="etc" name="hobby"><label for="etc">기타 <input type="text"></label><br>
+            <br>자기소개<br>
+            <textarea id="introduce" cols="70" rows="10" style="resize: none;"></textarea>
+
+
+        </fieldset>
+
+
+
+
+
+        <br>
+        <button type="submit">회원가입</button>
+        <button type="reset">다시입력</button>
+        <button type="menu">이전으로</button>
+    </form>
+
+</body>
+
+</html>
