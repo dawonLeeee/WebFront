@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_이미지 관련 태그</title>
+
+    <style>
+        div {
+            border: 1px solid black;
+            background-color: #ccc;
+            width: 1000px;
+            height: 250px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>이미지 관련 태그</h1>
+
+    <pre>
+        - 웹 문서에 사진이나 이미지를 삽입하는 용도의 태그
+        - img태그는 내용이 없으므로 종료태그가 존재하지 않음
+
+        [속성]
+        1)src : 삽입할 이미지의 경로를 지정하는 속성(파일경로, 웹 주소)
+
+        2)width/height : 이미지의 크기를 지정하는 속성
+
+        3)alt : 이미지를 설명하는 속성
+            (1) 이미지가 출력되지 않는 경우
+            (2) 웹 접근성(시각장애인)
+    </pre>
+
+
+    <h3>src 속성</h3>
+    <h4>웹 주소를 이용한 이미지 출력</h4>
+    <img width="150" height="150"
+        src="https://mblogthumb-phinf.pstatic.net/MjAyMTAyMTdfNDkg/MDAxNjEzNTM4NTEyMDQ2.yS8xVRG5x9z5LP4cUEane_-a5rowXMwdEmoAmO7iGxwg.mm1QtHyy9oLZpCt2C6jiNh2ILpEjeKR8WAqQHVs1-2Ug.JPEG.letyourselfglow/IMG_3251.JPG?type=w800">
+
+    <h4>현재 컴퓨터에 존재하는 이미지 출력</h4>
+    <pre>
+        - 절대 경로 : 하나의 절대적인 기준점을 토대로 목표하는 위치까지 이동하는 경로 작성
+            ex) 서울시 중구 남대문로 120 2층 B강의장
+            ex) C: / D: 등의 드라이브가 기준
+                --->VSCODE : 워크스페이스(열려있는 최상위 폴더)가 기준
+            C:\Users\User\Desktop\programming\WebFront\images\cats\cat1.jpg
+            <img src="/images/cats/cat1.jpg" width="180" height="150">
+
+        - 상대 경로 : 현재 위치를 기준으로 목표하는 위치까지 이동하는 경로
+            ex) 옆반
+            ex) 작성중인 파일이 기준
+
+            .. : 상위폴더로 이동
+            / : 하위폴더, 하위파일 지정
+
+            ../images/cats/cat1.jpg
+
+            <img src="../images/cats/cat2.jpg" width="180" height="150">
+    </pre>
+
+
+    <hr>
+    <h3>alt속성</h3>
+    <img src="../images/flowers/flower1.jpg" width="10%" height="10%" alt="빨간 꽃">
+
+
+    <hr>
+    <h3>width / height 속성</h3>
+
+    <pre>
+        - 고정 크기 단위 : 화면 크기와 관계없이 항상 지정된 크기 값을 갖는 단위
+            ex) pixel, point
+
+        - 가변 크기 단위 : 화면이나 영역에 따라 크기가 변하는 단위
+            ex) %, em, rem
+    </pre>
+
+    <h4>고정 크기 단위(px)</h4>
+    <img src="../images/dogs/dog1.jpg" width="300px" height="240px">
+    <img src="../images/dogs/dog2.jpg" width="300px" height="240px">
+    <img src="../images/dogs/dog3.jpg" width="300px" height="240px">
+    <img src="../images/dogs/dog4.jpg" width="300px" height="240px">
+    <img src="../images/dogs/dog5.jpg" width="300px" height="240px">
+
+
+    <div>
+        <img src="../images/dogs/dog1.jpg" width="300px" height="240px">
+        <img src="../images/dogs/dog2.jpg" width="300px" height="240px">
+        <img src="../images/dogs/dog3.jpg" width="300px" height="240px">
+        <img src="../images/dogs/dog4.jpg" width="300px" height="240px">
+        <img src="../images/dogs/dog5.jpg" width="300px" height="240px">
+        <br> >>>옆으로는 영역을 못 벗어나는데 세로로는 영역을 벗어남
+    </div>
+
+    <hr>
+    <h4>가변 크기 단위(%)</h4>
+    <img src="../images/flowers/flower1.jpg" width="15%" height="240px">
+    <img src="../images/flowers/flower2.jpg" width="15%" height="240px">
+    <img src="../images/flowers/flower3.jpg" width="15%" height="240px">
+    <img src="../images/flowers/flower4.jpg" width="15%" height="240px">
+    <img src="../images/flowers/flower5.jpg" width="15%" height="240px">
+
+    <div>
+        <img src="../images/cats/cat1.jpg" width="24%" height="50%">
+        <img src="../images/cats/cat2.jpg" width="24%" height="50%">
+        <img src="../images/cats/cat3.jpg" width="24%" height="50%">
+        <img src="../images/cats/cat4.jpg" width="24%" height="50%">
+        <img src="../images/cats/cat1.jpg" width="24%" height="50%">
+        <img src="../images/cats/cat2.jpg" width="24%" height="50%">
+        <img src="../images/cats/cat3.jpg" width="24%" height="50%">
+        <img src="../images/cats/cat4.jpg" width="24%" height="50%">
+    </div>
+</body>
+
+</html>
