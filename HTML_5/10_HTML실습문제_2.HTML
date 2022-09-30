@@ -14,35 +14,39 @@
             <legend>납품자 정보</legend>
             <ol>
                 <li>
-                    납품자명 : <input id="delivery" type="text">
+                    <label>납품자명 : </label>
+                    <input name="name" type="text">
                 </li><br>
                 <li>
-                    email : <input id="email" type="email" placeholder="answer@naver.com">
+                    <label>email : </label>
+                    <input name="email" type="email" placeholder="answer@naver.com">
                 </li><br>
                 <li>
-                    홈페이지 : <input type="text" value="http://">
+                    <label>홈페이지 : </label>
+                    <input type="text" value="http://" name="homepage">
                 </li><br>
                 <li>
-                    지역 : <select name="region">
-                        <option>부산</option>
-                        <option>서울</option>
-                        <option>경기</option>
-                        <option>대전</option>
-                        <option>대구</option>
+                    <label>지역 : </label>
+                    <select name="region">
+                        <option value="부산">부산</option>
+                        <option value="서울">서울</option>
+                        <option value="경기">경기</option>
+                        <option value="대전">대전</option>
+                        <option value="대구">대구</option>
                     </select>
                 </li><br>
             </ol>
         </fieldset>
         <fieldset>
             <ul>
-                <li>상품명 : <input>
+                <li><label>상품명 : <input type="text" name="productName"></label>
 
                 </li><br>
-                <li>납품수량 : <input type="number" placeholder="최소 100"></li><br>
-                <li> 납품등급 : <input type="range" min="1" max="5" step="1">
+                <li><label>납품수량 : <input type="number" placeholder="최소 100" min="100"></label></li><br>
+                <li> <label>납품등급 : <input type="range" min="1" max="5" step="1"></label>
 
                 </li><br>
-                <li> 기타사항 : <textarea name="" id="" cols="30" rows="5"></textarea>
+                <li><label> 기타사항 : <textarea name="etc" cols="30" rows="5"></textarea></label>
 
                 </li><br>
             </ul>

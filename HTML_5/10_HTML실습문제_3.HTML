@@ -15,24 +15,44 @@
     <form action="#">
         <fieldset>
             <legend>필수 입력 사항</legend>
-            ID<input type="text" placeholder="아이디 10글자 이내" required> <br>
-            비밀번호<input type="text" placeholder="영문, 숫자, 특수문자 포함 8자 이상" required size="30px"> <br>
-            비밀번호 확인<input type="text" required size="30px"> <br>
-            Email<input type="text" required> <select>
-                <option>직접입력</option>
-                <option>@naver.com</option>
-                <option>@daum.net</option>
-                <option>@google.com</option>
-                <option>@nate.com</option>
-            </select> <br>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <td><input type="text" placeholder="아이디 10글자 이내" name="inputId" required></td>
+                    <td><button>중복확인</button></td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td colspan="2"><input type="text" name="inputPw1" placeholder="영문, 숫자, 특수문자 포함 8자 이상" required
+                            size="30px"></td>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인</th>
+                    <td colspan="2"><input type="text" name="inputPw2" required size="30px" maxlength="30"></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type="text" name="inputEmail1" required> </td>
+                    <td><select name="inputEmail2">
+
+                            <option value="naver">naver.com</option>
+                            <option value="daum">daum.net</option>
+                            <option value="google">google.com</option>
+                            <option value="nate">nate.com</option>
+                            <option selected>직접입력</option>
+                        </select></td>
+
+                </tr>
+            </table>
+
         </fieldset><br>
         <fieldset>
             <legend>추가 정보</legend>
             프로필 사진 <input type="file"><br>
             <br>성별 :
-            <input type="radio" name="gender" id="male"><label for="male">남자</label>
+            <input type="radio" name="gender" id="male"><label for="male" checked>남자</label>
             <input type="radio" name="gender" id="female"><label for="female">여자</label><br>
-            <br>생년월일 : <input type="date"><br><br>
+            <br>생년월일 : <input type="date" name="dateIn"><br><br>
 
             <br>취미<br>
             <!-- '기타'누르면 checkbox 체크되게 하는 것? -->
@@ -55,7 +75,7 @@
         <br>
         <button type="submit">회원가입</button>
         <button type="reset">다시입력</button>
-        <button type="menu">이전으로</button>
+        <button type="button">이전으로</button>
     </form>
 
 </body>
