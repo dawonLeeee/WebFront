@@ -1,0 +1,52 @@
+/*-----------------------------------------------------------------------------*/
+/*:only-child*/
+#test1>p:only-child {
+    /*test1에 자식이 하나밖에 없고그 요소가 p태그인 경우*/
+    background-color: steelblue;
+}
+
+/* :only-of-type*/
+#test2>p:only-of-type {
+    background-color: crimson;
+}
+
+/* :only-of-type*/
+#test2>pre:only-of-type {
+    background-color: skyblue;
+}
+
+/*-----------------------------------------------------------------------------*/
+/* :empty*/
+#test3>p:empty {
+    height: 30px;
+    background-color: orange;
+    border: 1px solid black;
+}
+
+#test3>p {
+
+    border: 3px solid black;
+}
+
+#test4,
+.test4,
+[name='test4'] {
+    background-color: yello;
+}
+
+
+
+/*-----------------------------------------------------------------------------*/
+/*특정 요소 내부에 있는 특정 클래스만 선택*/
+#test5 .test5 {
+    /*id가 test5인 요소의 후손 중 클래스가 test5인 요소만 선택*/
+    background-color: aquamarine;
+}
+
+/*-----------------------------------------------------------------------------*/
+/*클래스가 여러 개인 요소를 선택하는 방법
+*/
+.test6.c6 {
+    /*순서 관계 없음*/
+    background-color: red;
+}

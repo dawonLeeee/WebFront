@@ -1,0 +1,198 @@
+/* CSS파일
+    - 파일 전체가 <style> 태그 내부라고 생각하면 된다
+*/
+
+
+/*기본 속성 선택자([속성명="속성값"])*/
+div[name="name-1"] {
+    background-color: orangered;
+}
+
+p[name='name-1'] {
+    background-color: green;
+}
+
+[name=name-2] {
+    background-color: blue;
+}
+
+.test-1[name='name-2'] {
+    color: wheat;
+}
+
+/*class가 test=1인 요소 중 name속성값이 name-2인 요소 선택*/
+
+
+/* 자식 선택자*/
+
+/* id가 parent-ul인 요소의 자식 요소 중 li태그를 모두 선택*/
+#parent_ul>li {
+    background-color: orange;
+}
+
+#parent_ul>.test-2 {
+    background-color: pink;
+}
+
+#parent_ul>li>span {
+    background-color: green;
+}
+
+#parent_ul>li>.test-2 {
+    color: red;
+}
+
+/*후손 선택자(띄어쓰기)*/
+#test-div {
+    border: 2px solid black;
+}
+
+#test-div>p {
+    background-color: yellow;
+}
+
+#test-div p {
+    color: blue;
+}
+
+#test-div .test-3 {
+    background-color: green;
+}
+
+/* 후손 선택자 + 모든 요소 선택자*/
+#test-div * {
+    font-family: "궁서체";
+}
+
+
+
+/*반응 선택자*/
+.div-cls {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: wheat;
+    margin-bottom: 20px;
+    /*아랫쪽 방향으로 다른 요소와 20px 간격을 만듬*/
+
+    cursor: pointer;
+
+}
+
+/*클릭하고 있을 때만 반응하는 active*/
+/*버튼을 눌린거같은 효과를 나타냄*/
+#active-test:active {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+/*마우스 포인터가 올라갔을 때 반응하는 hover*/
+#hover-test:hover {
+    background-color: hotpink;
+    color: white;
+    font-weight: bold;
+    width: 600px;
+
+}
+
+/* hover-test의 스타일이 변하는 기간을 0.5초로 설정*/
+#hover-test {
+    transition-duration: 5s;
+}
+
+
+/*상태 선택자*/
+
+/*요소에 초점이 맞처진 경우(focus)*/
+#focus-test:focus {
+
+    outline-width: 2px;
+}
+
+
+
+
+/*요소에 체크가 된 경우(:checked)*/
+input[name='fruits']:checked {
+    width: 30px;
+    height: 30px;
+
+    /*radio, checkbox의 스타일은 크기를 제외하곤 적용되지 않는다*/
+    background-color: red;
+    color: red;
+
+}
+
+
+/*활성화된 상태의 요소를 선택하는 :enabled*/
+#test-div2>input:enabled {
+    background-color: yellowgreen;
+}
+
+/*비활성화된 상태의 요소를 선택하는 :disabled*/
+#test-div2>input:disabled {
+    background-color: #ccc;
+}
+
+
+/*동위 선택자*/
+
+/*A 바로 다음에 오는 B 요소를 선택(+)*/
+#div1+div {
+    background-color: violet;
+}
+
+/*id가 div1인 요소의 바로 다음에 오는 div태그 선택*/
+
+/*A 다음의 모든 B 요소를 선택 (~)*/
+#div3~div {
+    background-color: chocolate;
+}
+
+
+/*------------------------------------------------*/
+
+/*label태그 스타일 지정*/
+.chk+label {
+    /* label은 기본적으로 inline형식->크기 조절 x
+            -> 형식 변경
+    */
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    /*화면 수평분할 + 크기조정*/
+
+    cursor: pointer;
+    border-radius: 15%;
+}
+
+/*체크된 체크박스 뒤에 있는 label 태그 스타일 지정*/
+.chk:checked+label {
+    background-image: url(../../images/check.png);
+    /*cf)
+    - src == 소스코드
+    - href == 문서경로
+    - url == 이미지, 동영상
+    */
+    /*배경 이미지*/
+    background-repeat: no-repeat;
+    background-size: 27px;
+    /*배경 이미지 크기*/
+    background-position: -1px 4px;
+    /*왼쪽 1px이동, (모니터는 아래방향이 플러스) 아래로 4px*/
+}
+
+/*checkbox를 존재는 하지만 보이지 않게 처리*/
+.chk {
+    display: none;
+}
+
+.test-4 {
+    border: 1px solid black;
+    width: 200px;
+    height: 30px;
+    display: inline-block;
+
+}

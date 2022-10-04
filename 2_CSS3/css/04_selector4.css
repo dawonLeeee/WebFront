@@ -1,0 +1,93 @@
+/*-------------------------------------------------------------------------*/
+/*일반 구조 선택자
+    - :first-child : 형제 관계의 요소 중 첫 번째 요소
+    - :last-child : 형제 관계의 요소 중 마지막 요소
+    - nth-child(숫자 또는 수열) : 형제 관계의 요소 중 숫자 번째 요수 
+        또는 모든 수열번째 요소 선택
+    - nth-last-child(숫자 또는 수열) : 형제 관계의 요소 중 
+    "뒤에서부터" 지정된 숫자 번째 요수 또는 모든 수열번째 요소 선택
+*/
+
+/* :first-child*/
+#test1>p:first-child {
+    background-color: red;
+}
+
+/* :last-child : 형제관계의 요소 중 마지막 요소*/
+/*#test1의 자식요소 중 마지막 자식이 p태그가 맞는가?-->N*/
+#test1>p:last-child {
+    background-color: orange;
+    /*안됨*/
+}
+
+#test1>p:nth-child(2) {
+    /*첫 번째 요소는 1번, 2번째 요소가 2번!!*/
+    /*#test1의 자식요소 중 2번째 자식이 p태그가 맞을 경우 선택*/
+    background-color: aqua;
+}
+
+#test1>p:nth-child(4) {
+    background-color: yellow;
+}
+
+#test1>*:nth-child(6) {
+    /*#test6에 6번째 자식이 있으면 선택*/
+    background-color: black;
+    color: white;
+}
+
+#test1>p:nth-child(2n+1) {
+    /*n은 0보다 크거나 같은 정수(양수, 0)*/
+    border: 3px solid black;
+}
+
+#test1>*:nth-child(2n) {
+    font-size: 30px;
+}
+
+#test1>*:nth-last-child(2) {
+    font-family: serif;
+    font-weight: bold;
+}
+
+
+/*-------------------------------------------------------------------------*/
+/*형태 구조 선택자*/
+/*
+    - :first-of-type : 같이 선택된 "형제 요소" 중 첫 번째 요소
+    - :last-of-type : 같이 선택된 "형제 요소" 중 마지막 요소
+    - :nth-of-type(숫자 또는 수열) : 같이 선택된 "형제 요소" 중 (숫자 또는 수열)번째 요소
+    - :nth-last-of-type(숫자 또는 수열) : `` 뒤에서~~
+   */
+
+#test2>p:first-of-type {
+    /*#test2에서 p태그들 중에 첫 번째 요소*/
+    background-color: orange;
+}
+
+#test2>p:last-of-type {
+    background-color: orangered;
+}
+
+#test2>p:nth-of-type(2n) {
+    font-weight: 700;
+}
+
+#test2>*:nth-last-of-type(2n+1) {
+    border: 2px solid blue;
+    /*원하는대로 선택안됨. 왜? 각 타입별로 수열이 적용됨
+    */
+}
+
+#test2>*:nth-child(3n+1) {
+    background-color: pink;
+}
+
+
+/*-------------------------------------------------------------------------*/
+/*부정 선택자*/
+#test3>li:not(:nth-child(3n)) {
+    background-color: blueviolet;
+    color: white;
+    font-weight: 700;
+}
