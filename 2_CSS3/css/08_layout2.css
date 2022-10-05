@@ -1,0 +1,110 @@
+.box {
+    width:100px;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+/*content 영역*/
+.content {
+    width:100px;
+    height: 100px;
+
+
+    /*width, height 속성은 
+    기본적으로 content 영역의 크기를 지정하는 속성*/
+}
+.border {
+    border-width : 10px; /*테두리 두께*/
+    border-style: solid; /*테두리 모양*/
+    border-color : red;
+
+    border-top : 20px solid blue;
+    border-right : 5px dotted green;
+    border-bottom: 10px double yellow;
+    border-left: 15px dashed gray;
+
+    /*border, padding, margin은 
+    상하좌우 각각의 방향에 따라 별도의 스타일 지정이 가능한다
+    */
+}
+
+/*padding 영역*/
+.padding{
+    /* padding:30px; content와 border 사이 간격을 상, 하, 좌, 우 30px 벌림  */
+    
+    /* padding 방향  : 지정된 방향의 padding 크기 지정 */
+    /* padding-top: 50px;
+    padding-right: 100px;
+    padding-bottom: 70px;
+    padding-left: 20px; */
+
+    /* padding 속성 사용법 (margin에도 적용 가능)
+        padding : 값1; --> top/rt/bottom/lt 모든 방향을 값1만큼 크기로 지정
+        padding : 값1 값2; --> top, botton(값1) / rt, lt(값2)
+        padding : 값1 값2 값3; --> top(값1) / rt,lt(값2) / botton(값3)
+        padding : 값1 값2 값3 값4; -->top(값1), rt(값2), bottom(값3), lt(값4)
+    
+    */
+    padding:100px 50px 30px 30px;
+}
+
+
+
+.margin{
+    margin:50px;
+
+    /* block 형식의 요소는 내용이 표시되고 남는 부분을 모두 margin으로 채워
+    해당 줄에 달느 요소가 들어오지 못하게 함
+    
+    + 왼쪽에 요소가 없어도 밀어지는 이유는 body태그와의 간격을 유지하기 위해
+    */
+}
+
+#m1{
+    margin:auto;
+    /* margin:auto; --> 
+        - 자동으로 다른 요소와의 간격을 조정
+        - 보통 "가로" 축 가운데 정렬 사용 */
+}
+
+#m2{
+    margin-top: 100px;
+}
+
+/* ------------------------------------------------------------------- */
+/* 요소의 전체 크기가 가로세로 300px인 정사각형 */
+#test-box{
+    /* 기본적으로 content 영역의 크기를 나타냄 */
+    width: 80px;
+    height: 80px;
+    background-color: #ccc;
+
+    border : 10px solid black;
+    padding : 100px;
+}
+
+
+#test-box2{ /*크기계산 X*/
+    /* 기본적으로 content 영역의 크기를 나타냄 */
+    width: 300px;
+    height: 300px;
+    background-color: rgb(103, 250, 108);
+
+    border : 10px solid black;
+    padding : 100px;
+
+    box-sizing: border-box;
+    /* box-sizing 속성
+        - width/height 속성이 적용되는 범위를 지정하는 속성
+
+        1) content-box(기본값) : width/height 적용범위를 content로 한정
+        2) border-box : width/height 적용범위를 border + padding + content의 합산과 
+        동일하도록 계산해서 content의 크기를 자동으로 지정
+
+
+        -> 많은 사이트에서 기본설정으로
+        *{ margin: 0; padding: 0; box-sizing: border-box;}
+        로 해놓는다
+    
+    */
+}
