@@ -45,6 +45,11 @@ color:white;
     
 }
 
+.after::after{
+    content: "aaaa";
+    display: block;
+    clear: both;
+}
 
 /* ---------------------------------------------------------------------- */
 /* 좌우 2분할 */

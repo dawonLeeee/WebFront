@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap');
+
+
+
+#size-test {
+    font-size: 40px;
+}
+
+#size-test>li:nth-child(1){ font-size: 10px;}
+#size-test>li:nth-child(2){ font-size: 7pt;} /*px < pt*/
+#size-test>li:nth-child(3){ font-size:50%;}
+#size-test>li:nth-child(4){ font-size: 0.5em;}
+
+/* -----------------------------------------------------------------*/
+/* font-weight */
+#weight-test {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#weight-test>li:nth-child(1) {
+    font-weight: lighter;
+    /* 부모보다 얇게, 부모가 bold인 경우 normal로 표시 */
+}
+
+#weight-test>li:nth-child(2) {font-weight: bold;}
+#weight-test>li:nth-child(3) {font-weight: bolder;} 
+/*부모보다 두껍게. 부모가 얇은 경우 normal로 표시*/
+#weight-test>li:nth-child(4) {font-weight: 100;}
+#weight-test>li:nth-child(5) {font-style: oblique;}
+/* font-style : 글꼴의 모양을 지정하는 속성 */
+/* italic : 폰트에서 제공하는 비스듬한 글자 */
+/* oblique : 강제로 글자를 비스듬하게 변경 */
+
+
+
+/* font-family */
+#family-test1 > li:nth-child(1) {
+    font-family: "궁서";
+}
+#family-test1 > li:nth-child(2) {
+    font-family: "궁서체";
+}
+/* 폰트명(궁서) : 글짜의 크기에 따라 폭이 변함(가변)
+    폰트명 + 체(궁서체) : 글짜 크기 상관 없이 폭이 일정함
+*/
+
+#family-test1 > li:nth-child(3) {
+    font-family: "아무거나";
+    /* 폰트가 없을 경우 브라우저 기본 폰트 제공 */
+}
+
+
+/* --------------------------------------------------------- */
+/* 웹 폰트 사용하기 */
+
+/* link태그를 이용한 웹 폰트 적용 */
+#family-test2>li:nth-child(1){
+    font-family: 'Jua', sans-serif;
+}
+
+/* @import 이용한 웹 폰트 적용 */
+#family-test2>li:nth-child(2){
+    font-family: 'Sunflower', sans-serif;
+}
+
+/* @font-face 이용한 웹 폰트 적용 */
+@font-face {
+    font-family: 'RixInooAriDuriR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+#family-test2>li:nth-child(3){
+    font-family: 'RixInooAriDuriR';
+}
