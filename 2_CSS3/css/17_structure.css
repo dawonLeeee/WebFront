@@ -1,0 +1,281 @@
+*{
+    box-sizing: border-box;
+    /* html요소가 가지고 있는 고유한 padding, margin을 모두 없앰 */
+    padding:0;
+    margin:0;
+}
+
+/* 분할된 영역에 테두리를 추가 */
+/* div, span, main, header, footer, nav, aside, section, article{
+    border:1px solid black;
+} */
+
+/* main-------------------------------------------------------------------------- */
+main{
+    width: 1140px;
+    margin:auto; /*body태그 가로방향 가운데 정렬*/
+}
+
+/* footer -------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------- */
+
+footer{
+    height: 200px;
+    background-color: #a3add342;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+footer>p{
+    font-weight: bold;
+    margin: 16px 0;
+}
+
+footer>article>*{
+    font-size: 14px;
+}
+
+footer a{
+    text-decoration: none;
+    color:black;
+}
+
+footer span {
+    padding:0 10px;
+}
+
+
+
+/* header-------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------- */
+
+header{
+    height: 200px;
+
+     /*내부 요소를 유연하게 배치/정렬
+        -> 내부 요소의 자동으로 지정된 margin이 모두 사라져 한 줄(기본값 row)로 배치*/
+    display: flex; 
+   
+}
+/* flex-basis : 중심축 방향으로 일정한 크기를 갖게 하고
+    display: flex 설정시 지정되는 align-items의 기본값 stretch를 이용해서
+    item의 높이(cros-axis 방향)를 부모만큼 늘어나게 함*/
+header>section:nth-child(1){flex-basis: 15%;}
+header>section:nth-child(2){flex-basis: 70%;}
+header>section:nth-child(3){flex-basis: 15%;}
+
+/* 로고 */
+#home-logo{
+    width:120px;
+}
+
+/* 선택자가 중복작성되어도 오류X, 모든 css 속성이 적용됨 */
+header>section:nth-child(1){
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* 검색창 입력상자------------- */
+.search-area{width: 500px;} /*검색창 전체 너비 지정*/
+
+.search-area fieldset {
+    padding: 2px;
+    margin: 0;
+    border: 2px solid #455ba8;
+    border-radius: 5px;
+
+    display: flex;
+}
+
+/* 검색어 입력 상자 */
+#query {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+
+    /* 테두리 없애기 */
+    /* border: 0; */
+    border: none;
+
+    /* outline : input요소에 포커스가 맞춰졌을 때 이를 표현하기 위한 바깥선 */
+    outline: none;
+    /*0도 가능*/
+
+    width: 92%;
+}
+
+/* 검색버튼 디자인 */
+#search-btn {
+    width: 8%;
+    /*icon은 특수문자 같은 문자로 취급되어 글자, 글꼴스타일 적용가능*/
+    font-size: 1.2em;
+    background-color: white;
+    border: 0;
+    color: #455ba8;
+    cursor: pointer;
+}
+header>section:nth-child(2){
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+/* nav--------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------- */
+
+nav{
+    height: 50px;
+    border-bottom: 2px solid black;
+
+    /* 화면 밖으로 요소가 벗어났을 때 지정된 위치에 고정 */
+    position:sticky;
+    top:0;
+    background-color: white;
+}
+
+
+/* ul 스타일 지정 */
+nav>ul{
+    margin:0;
+    padding:0;
+    list-style: none; /*li앞에 나오는 점, 숫자 등 없애는것*/
+    display: flex;
+    height: 100%;
+}
+/* navigator 메뉴 */
+nav li{
+    flex-basis: 150px;
+}
+
+/* 메뉴 내부 a태그 */
+nav li>a{
+    text-decoration: none; /*밑줄 없애기*/
+    font-size: 18px;
+    font-weight: bold;
+    color:black;
+    display: block;
+    height: 100%;
+    
+    /* 글자 정렬
+    padding: 11px 0; 세로 가로
+    text-align: center; */
+
+    /* 글자 정렬: 같은 방법(내부에 작성된 글자를 요소로 취급) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+
+}
+
+nav li>a:hover{
+    background-color: #455ba8;
+    color: white;
+}
+/* content -------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------- */
+section.content{
+    height: 800px;
+    display:flex;
+}
+
+.content-1{flex-basis:70%;}
+.content-2{flex-basis:30%;}
+
+
+/* login폼 ------------------------------------------------*/
+form[name="login-frm"]{
+    height: 150px;
+    padding:10px;
+    margin-top:10px;
+    display: flex;
+    flex-direction: column; /*중심축 세로 변경*/
+    justify-content: center; /*중심축(세로) 가운데 배치*/
+}
+
+/* id, pw, 로그인버튼 영역---------------------------------------- */
+#id-pw-area{
+    margin:0;
+    padding: 0;
+    border : 1px solid #ddd;
+
+    display: flex;
+
+    flex-basis: 60%; /*form태그 내부에서 중심축(col) 방향으로 60%만큼 차지*/
+}
+
+/* id, pw 영역------------------------------------------------ */
+#id-pw-area>section:first-child{
+    flex-basis: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* id, pw input태그 */
+#id-pw-area>section:first-child>input{
+    flex-basis: 50%;
+    border:0;
+    outline:0;
+    padding: 5px;
+
+    border-right: 1px solid #ddd;
+}
+
+#id-pw-area>section:first-child>input:first-child{
+    border-bottom: 1px solid #ddd;
+}
+
+#id-pw-area>section:first-child>input:focus{
+    border: 2px solid #455ba8;
+}
+
+/* 아이디 저장 영역 */
+form[name='login-frm']>label{
+    margin-top:5px;
+    font-size: 14px;
+}
+
+
+/* login버튼 영역---------------------------------------------------------- */
+#id-pw-area>section:last-child{
+    flex-basis: 25%;
+}
+
+#id-pw-area>section:last-child>button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    
+}
+#id-pw-area>section:last-child>button:hover{
+    background-color: #455ba8;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* 회원가입, id/pw찾기 영역--------------------------------------------------- */
+#signUp-find-area{
+    margin-top:10px; /*다른 영역과의 간격 10px*/ 
+    padding-left: 5px;
+}
+
+#signUp-find-area>a{
+    text-decoration: none;
+    color:black;
+    font-size: 14px;
+}
+
+#signUp-find-area>span{
+    padding: 0 10px;
+}
+
+/* ----------------------------------------------------------------------------- */
