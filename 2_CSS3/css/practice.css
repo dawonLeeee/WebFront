@@ -1,38 +1,37 @@
 *{
     box-sizing: border-box;
-    padding:0;
     margin:0;
+    padding:0;
 }
 
-/* div, span, main, header, section, article, footer, nav{
+/* div, span, main, section, article, footer, nav, aside{
     border: 1px solid black;
 }
  */
-/* ----------------------------------------------------------------------------- */
-/* main-------------------------------------------------------------------------- */
+/* main */
 main{
-    width: 1140px;
+    width: 1440px;
     margin:auto;
 }
 
-/* ----------------------------------------------------------------------------- */
-/* header-------------------------------------------------------------------------- */
+
+
+
+/* header */
 header{
-    display:flex;
+    height: 200px;
+    display: flex;
 }
 
-header>section{
-    height: 200px;
-}
-header>section:nth-child(1){flex-basis: 15%;    
-}
+header>section:nth-child(1){flex-basis: 15%;}
 header>section:nth-child(2){flex-basis: 70%;}
 header>section:nth-child(3){flex-basis: 15%;}
 
-#logo-img{
-    height: 120px;
-}
 
+/* logo */
+#home-logo{
+    width: 120px;
+}
 header>section:nth-child(1){
     display: flex;
     justify-content: center;
@@ -42,162 +41,210 @@ header>section:nth-child(1){
 
 
 
-header>section:nth-child(2){
+/* 검색창 입력상자 */
+.search-area{width: 500px;}
+
+.search-area fieldset{
+    margin: 0;
+    padding: 2px;
+    border-radius: 5px;
+    border: 2px solid #455ba8;
+
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-header>section:nth-child(2)>form{
-    display: flex;
-    width: 450px;
-    height: 40px;
-    border : 2px solid #455ba8;
-    border-radius: 5px;
-}
 #query{
-    flex-basis: 90%;
+    padding: 10px;
     font-size: 18px;
     font-weight: bold;
+
     border:none;
-    padding-left: 10px;
     outline: none;
+    width: 92%;
 }
+
+
+/* 검색버튼 디자인 */
 #search-btn{
-    flex-basis: 10%;
+    width: 8%;
+
     background-color: white;
-    border:none;
-    padding: 5px;
+    border: 0;
+    color: #455ba8;
     cursor: pointer;
     font-size: 1.2em;
 }
-/* ----------------------------------------------------------------------------- */
-/* nav-------------------------------------------------------------------------- */
+header>section:nth-child(2){
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* nav */
 nav{
     height: 50px;
     border-bottom: 2px solid black;
-    
+
+    position:sticky;
+    top:0;
+    background-color: white;
 }
+
+/* ul 스타일 지정 */
 nav>ul{
-    display: flex;
-    margin:0;
+    margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
     height: 100%;
 }
-nav>ul>li{
-    width: 150px;
-    height: 100%;
-    flex-basis: 15%;
-}
-nav>ul>li>a{
+
+/* navigator 메뉴 */
+nav li{flex-basis: 150px;}
+
+
+/* 메뉴 내부 a 태그 */
+nav li>a{
     text-decoration: none;
-    color: black;
-    border-radius: 5px;
-    height: 100%;
+    color:black;
     font-size: 18px;
     font-weight: bold;
-    display: block;
+    height: 100%;
+    display:block;
 
-    padding: 11px 0;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition-duration: 0.3s;
 }
 
 nav li>a:hover{
     background-color: #455ba8;
     color: white;
-    transition-duration: 0.3s;
 }
 
 
 
-/* ----------------------------------------------------------------------------- */
-/* section-------------------------------------------------------------------------- */
-fieldset{
-    border:0;
-}
 
 
-section.content{
-    display: flex;
+/* content */
+.content{
     height: 800px;
-}   
-.content-1{flex-basis: 70%;}
-.content-2{flex-basis: 30%;}
-
-#id-pw-area{
-    padding: 10px;
     display: flex;
-    height: 100px;
 }
-#id-pw-area>section:nth-child(1){
+.content-1{
+    width: 70%;
+}
+.content-2{
+    width: 30%;
+}
+
+/* login 폼 */
+form[name="login-frm"]{
+    height: 150px;
+    padding:10px;
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* id, pw, 로그인버튼 영역 */
+#id-pw-area{
+    display: flex;
+    margin:0;
+    padding:0;
+    border: 1px solid #ddd;
+
+    flex-basis: 60%;
+}
+
+/* id, pw 영역 */
+#id-pw-area>section:first-child{
+    display: flex;
+    flex-direction: column;
     flex-basis: 75%;
-    border : 1px solid #ddd;
 }
-#id-pw-area>section:nth-child(1)>input{
-    width: 100%;
-    height: 50%;
-    border: none;
+
+/* id, pw input태그 */
+#id-pw-area>section:first-child>input{
+    border:0;
+    outline:0;
+    padding:5px;
+    flex-basis: 50%;
+    border-right: 1px solid #ddd;
 }
-#id-pw-area>section:nth-child(1)>input:first-child{
+
+#id-pw-area>section:first-child>input:first-child{
     border-bottom: 1px solid #ddd;
 }
 
+#id-pw-area>section:first-child>input:focus{
+    border: 2px solid #455ba8;
+}
 
 
+/* 아이디 저장 영역 */
+label[name="saveId"]{
+    margin-top:5px;
+    font-size: 14px;
+}
+
+
+
+/* 로그인 버튼 */
 #id-pw-area>section:nth-child(2){
     flex-basis: 25%;
-    display: flex;
 }
+
 #id-pw-area>section:nth-child(2)>button{
-    height: 100%;
     width: 100%;
-    border:0;
-    margin:0;
-
+    height: 100%;
     background-color: white;
-    border: 1px solid #ddd;
-    cursor: pointer;
+    border:0;
+    cursor:pointer;
 }
+
 #id-pw-area>section:nth-child(2)>button:hover{
-    background-color: #455ba8;
-    color:white;
-    font-weight: bold;
+   background-color: #455ba8;
+   color: white;
+   font-weight: bold;
 }
 
-
-
-
-#signUp-find-area>a{
-    color: black;
-    text-decoration: none;
-
+/* 회원가입, ID/PW찾기 영역 */
+#signUp-find-area{
+    margin-top: 10px;
+    padding-left: 5px;
 }
 
 #signUp-find-area>span{
     padding:0 10px;
 }
-/* ----------------------------------------------------------------------------- */
-/* footer-------------------------------------------------------------------------- */
+
+
+
+/* footer */
 footer{
-    height:200px;
+    height: 200px;
     background-color: #a3add342;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 footer>p{
-    margin: 16px 0;
     font-weight: bold;
+    margin:16px 0;
 }
 
-footer a{
+footer>article>a{
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
-footer>article>span{
-    padding: 10px;
+footer span{
+    padding: 0 10px;
 }
