@@ -1,0 +1,28 @@
+#friends-display-link{
+    text-decoration: none;
+    color: rgba(0,0,0,0.5);
+    display: block;
+    background-color: #fafafa;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#friends-display-link>*{
+    padding: 5px 3px;
+    
+}
+
+.fa-circle-info{
+    color: rgba(0,0,0,0.3);
+    
+    text-align: center;
+    justify-content: center;
+}
+.fa-chevron-right{
+    
+}

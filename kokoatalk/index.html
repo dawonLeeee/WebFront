@@ -29,9 +29,10 @@
         <p class="welcome-header__text">If you have a Kokoa Account, log in with your email or phone number.</p>
     </header>
 
-    <form action="#" id="login-form">
-        <input type="text" name="loginId" placeholder="Email or phone number">
-        <input type="password" name="loginPw" placeholder="Password">
+    <!-- form의 method방식엔 get, post가 있다. post는 서버에 데이터 전송하느 방식 -->
+    <form action="friends.html" method="get" id="login-form">
+        <input type="text" name="username" placeholder="Email or phone number" required>
+        <input type="password" name="password" placeholder="Password" required>
         <button name="login-btn">Log In</button>
         <button name="signUp-btn">Sign Up</button>
 
