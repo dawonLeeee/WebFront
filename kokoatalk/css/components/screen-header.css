@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 0;
+    padding: var(--horizontal-space);
     width: 100%;
 }
 
@@ -19,3 +19,11 @@
 .screen-header__icons>span{
     margin-left: 20px;
 }
+
+.friends-screen__channel-header {
+    
+    justify-content: flex-end;
+    padding: 10px 0;
+    color: rgba(0,0,0,0.5);
+}
+

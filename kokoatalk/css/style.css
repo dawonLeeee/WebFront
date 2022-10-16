@@ -4,6 +4,7 @@
 @import "components/status-bar.css";
 @import "components/navigation.css";
 @import "components/screen-header.css";
+@import "components/user-component.css";
 
 /* screens */
 @import "screens/login.css";
@@ -15,7 +16,6 @@
 body{
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 0 15px;
 }
 
