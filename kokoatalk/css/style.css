@@ -33,3 +33,6 @@ body{
     font-family: "Open Sans", sans-serif;
 }
 
+.main-screen{
+    padding: 0px var(--horizontal-space);
+}

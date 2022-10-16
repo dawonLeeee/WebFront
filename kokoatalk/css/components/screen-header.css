@@ -5,6 +5,7 @@
     justify-content: space-between;
     padding: var(--horizontal-space);
     width: 100%;
+    margin: 10px 0;
 }
 
 .screen-header__title{
