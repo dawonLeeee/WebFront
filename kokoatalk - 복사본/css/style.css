@@ -1,0 +1,18 @@
+
+
+/* screens */
+@import "screens/header-footer.css";
+
+@import "components/status-bar.css";
+@import "components/navigation.css";
+@import "components/screen-header.css";
+@import "components/user-component.css";
+
+/* screens */
+@import "screens/login.css";
+@import "screens/friends.css";
+
+@import "variables.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
