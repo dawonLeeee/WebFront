@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_간이계산기</title>
+
+    <style>
+        .calculator {
+            border : 3px solid black;
+            background-color: #eee;
+            height: 250px;
+            width: 200px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .putNum {
+            width: 200px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+
+            border-bottom: 3px solid black;
+        }
+        .putNum > * {
+            height: 100%;
+        }
+
+
+        .buttons {
+            display: flex;
+            width: 200px;
+            height: 40px;
+
+            border-bottom: 3px solid black;
+        }
+
+        .buttons > * {
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>간이 계산기 만들기2</h1>
+
+    <div class="calculator">
+        <div class="putNum">
+            <input type="number" id="num1" >
+            <input type="number" id="num2" >
+        </div>
+        <div class="buttons">
+            <!-- 여기서 this: 클릭이 된 버튼을 나타냄 -->
+            <button onclick="calc(this.innerText)">+</button>
+            <button onclick="calc(this.innerText)">-</button>
+            <button onclick="calc(this.innerText)">*</button>
+            <button onclick="calc(this.innerText)">/</button>
+            <button onclick="calc(this.innerText)">%</button>
+        </div>
+        <div class="resultArea">
+            <div>result</div>
+            <div id="calResult"></div>
+        </div>
+    
+        
+    </div>
+
+    
+
+
+
+    <script src="../js/05_간이계산기3.js"></script>
+</body>
+</html>
