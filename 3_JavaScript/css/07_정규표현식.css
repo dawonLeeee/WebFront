@@ -1,0 +1,18 @@
+.area{
+    width: 500px;
+    min-height:  300px;
+    border: 1px solid black;
+}
+
+.confirm{
+    color: green;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+.error{
+    color: red;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: "궁서";
+}
