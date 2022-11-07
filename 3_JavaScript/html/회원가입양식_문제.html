@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 가입 양식</title>
+    <style>
+        .btn-area {
+            text-align: right;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        fieldset {
+            width: 430px;
+        }
+
+        span {
+            font-size: 14px;
+        }
+
+        .confirm {
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="main.html" method="POST" id="signupFrm" onsubmit="return validate()">
+        <fieldset>
+            <legend>회원 가입 양식</legend>
+
+            <table>
+                <tr>
+                    <td>아이디</td>
+                    <td>
+                        <input type="text" id="inputId">
+                    </td>
+                    <td>
+                        <button type="button">중복확인</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>비밀번호</td>
+                    <td>
+                        <input type="password" id="inputPw">
+                    </td>
+                    <td>
+                        <span id="pwMessage"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>비밀번호확인</td>
+                    <td>
+                        <input type="password" id="inputPwConfirm">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>이름</td>
+                    <td>
+                        <input type="text" id="inputName">
+                    </td>
+                    <td>
+                        <span id="nameMessage"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>성별</td>
+                    <td>
+                        <label> 남 <input type="radio" name="gender" value="m" id="genderM"></label>
+                        <label> 여 <input type="radio" name="gender" value="f" id="genderF"></label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>전화번호</td>
+                    <td>
+                        <input type="text" id="inputTel">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>이메일</td>
+                    <td>
+                        <input type="text" id="inputEmail">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="btn-area">
+                        <button type="reset">초기화</button>
+                        <button>회원가입</button>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+    <script src="../js/signUpPractice.js">
+    </script>
+</body>
+
+</html>
