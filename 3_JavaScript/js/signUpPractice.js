@@ -111,6 +111,8 @@ const inputTel = document.getElementById("inputTel");
 
 function validate(){
 
+    
+
 
     // 방법1
     // const gender = document.getElementsByName("gender"); // 요소2개짜리 배열
@@ -118,7 +120,15 @@ function validate(){
     //     alert("성별을 선택해주세요");
     //     return false;
     // }
+    
+    const gender = document.getElementById("gender");
+    if(!gender[0].checked && !gender[1].checked){
+        alert("성별 선택");
+        return false;
+    }
 
+    
+    
 
     // 방법2 --> 체크된 성별 radio버튼만 얻어오기
     // const gender = document.querySelector("input[name='gender']:checked");
@@ -128,10 +138,7 @@ function validate(){
     // }
 
 
-    if(genderM.checked == false && genderF.checked == false){
-        alert("성별을 선택해주세요");
-        return false;
-    }
+
 
     const inputTel = document.getElementById("inputTel");
     const regEx = /^[0][0-9]{1,2}-[0-9]{3,4}-[0-9]{4}/;

@@ -35,9 +35,11 @@ document.getElementById("btn1").addEventListener("click", function(){
 
     // ** 여러 요소를 얻어온 경우(HTMLCollection, NodList)는 배열이 아니므로
     // forEach()문을 쓸 수 없다!
-    arr4.forEach(function(a, i){
-        console.log(i + " : " + a);
+    arr4.forEach(function(item, index){
+        console.log(index + " : " + item);
     });
+
+
 
 
     // 3. for(item of 배열(또는 컬렉션)){} - 배열, 컬렉션
@@ -46,6 +48,8 @@ document.getElementById("btn1").addEventListener("click", function(){
     for(let item of arr4){
         console.log(item);
     }
+
+
 
 
     // li태그에 작성된 값 얻어와서 합 구하기
@@ -95,6 +99,7 @@ document.getElementById("btn2").addEventListener("click", function(){
     // 배열.indexOf(값) : 일치하는 값을 가진 요소의 index를 반환(없으면 -1 반환)
     console.log("우육면 인덱스 : " + arr.indexOf("우육면"));   
     console.log("갈비가 arr에 포함되어 있는가? : " + (arr.indexOf("갈비") != -1) );
+
 
 
 
