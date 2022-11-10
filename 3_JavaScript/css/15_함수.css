@@ -1,0 +1,10 @@
+code {
+    color: black;
+    font-size: 15px;
+    /* font-weight: bold; */
+    background-color: #ccc;
+
+    display: block;
+    width: 600px;
+}
+
